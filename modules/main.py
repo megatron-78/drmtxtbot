@@ -31,7 +31,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["baby"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("**ℍɪɪ ɧąƈƙɛཞ.😎 \n\n  𝔾ɪᴠᴇ /hacker ℂᴏᴍᴍᴀɴᴅ ᴛᴏ 𝔻ᴏᴡɴʟᴀᴏᴅ 𝔽ʀᴏᴍ ᴀ 𝕋ᴇ𝕩ᴛ ғɪʟᴇ.⚡️\n**")
+    editable = await m.reply_text("**ℍɪɪ 𝕄𝕖𝕘𝕒𝕥𝕣𝕠𝕟😎 \n\n  𝔾ɪᴠᴇ /megatron ℂᴏᴍᴍᴀɴᴅ ᴛᴏ 𝔻ᴏᴡɴʟᴀᴏᴅ 𝔽ʀᴏᴍ ᴀ 𝕋ᴇ𝕩ᴛ ғɪʟᴇ.⚡️\n**")
 
 
 @bot.on_message(filters.command("rukja"))
@@ -41,9 +41,9 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["hacker"]))
+@bot.on_message(filters.command(["megatron"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text('**ℍɪɪ ɧąƈƙɛཞ.😎 \n\n 𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️**')
+    editable = await m.reply_text('**ℍɪɪ 𝕄𝕖𝕘𝕒𝕥𝕣𝕠𝕟😎 \n\n 𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️**')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -100,7 +100,7 @@ async def account_login(bot: Client, m: Message):
     
     
 
-    await editable.edit("**Enter A Captio to add Otherwise send**   **`hacker`**")
+    await editable.edit("**Enter A Captio to add Otherwise send**   **`𝕄𝕖𝕘𝕒𝕥𝕣𝕠𝕟`**")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -189,7 +189,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**Name »** `{name}\nQuality » {raw_text2}`\n\n**Url »** `{url}`\n\n🤖𝔹ᴏᴛ 𝕄ᴀᴅᴇ 𝔹ʏ ɧąƈƙɛཞ.\n"
+                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**Name »** `{name}\nQuality » {raw_text2}`\n\n**Url »** `{url}`\n\n🤖𝔹ᴏᴛ 𝕄ᴀᴅᴇ 𝔹ʏ 𝕄𝕖𝕘𝕒𝕥𝕣𝕠𝕟\n"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
