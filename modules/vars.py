@@ -1,5 +1,5 @@
-api_id = 27161113
-api_hash = "65c4b51f54049ebe22bc01fd9a95575b"
-bot_token = "6313976047:AAGfjTjnkP44Iy5bd1X0yHCL-xM-qIQ8NvY"
+api_id = 26924168
+api_hash = "b05041459456cb772f25175e88ffdc53"
+bot_token = "7314398181:AAENfxCynPRqJ9WyVKN4otc_dv3u78hNCrw"
 AUTH = 6401497985
-#Bot Username = "hacejjebdbbot"
+#Bot Username = "adjrynarggbot"
