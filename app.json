@@ -16,8 +16,7 @@
             "required": true
         },
         "API_HASH": {
-            "description": "b05041459456cb772f25175e88ffdc53
-",
+            "description": "b05041459456cb772f25175e88ffdc53",
             "required": true
         },
         "BOT_TOKEN": {
