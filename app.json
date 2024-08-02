@@ -8,7 +8,7 @@
         "pyrogram"
     ],
     "repository": "https://github.com/Lordraaama/mypersonal",
-    "success_url": "https://t.me/teamjaishriramofficial",
+    "success_url": "https://github.com/amivin/aria2-heroku.git",
     "stack": "container",
     "env": {
         "API_ID": {
