@@ -24,9 +24,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 bot = Client(
     "bot",
-    api_id=api_id,
-    api_hash=api_hash,
-    bot_token=bot_token)
+    api_id=26924168,
+    api_hash=b05041459456cb772f25175e88ffdc53,
+    bot_token=7438535527:AAGqa1YbVzHDgqjykB1oIu8vktIvNJsxrlo)
 
 
 @bot.on_message(filters.command(["baby"]))
@@ -36,7 +36,7 @@ async def account_login(bot: Client, m: Message):
 
 @bot.on_message(filters.command("rukja"))
 async def restart_handler(_, m):
-    await m.reply_text("**ℝᴜᴋ 𝔾ʏᴀ😁😎**", True)
+    await m.reply_text("**ℝᴜᴋ 𝔾ʏᴀ Mᴇɢᴀᴛʀᴏɴ😁😎**", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
@@ -110,7 +110,7 @@ async def account_login(bot: Client, m: Message):
     else:
         MR = raw_text3
    
-    await editable.edit("Now send the **Thumb url**\nEg : ```https://telegra.ph/file/0633f8b6a6f110d34f044.jpg```\n\nor Send `no`")
+    await editable.edit("Now send the **Thumb url**\nEg : ```http://graph.org/file/be3a3c45c761ec78e279e.jpg```\n\nor Send `no`")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -206,7 +206,7 @@ async def account_login(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("**ℂᴏᴍᴘʟᴇᴛᴇ ℍᴏ 𝔾ʏᴀ 𝔹ᴏ𝕤𝕤😎**")
+    await m.reply_text("**ℂᴏᴍᴘʟᴇᴛᴇ ℍᴏ 𝔾ʏᴀ 𝔹ᴏ𝕤𝕤 Mᴇɢᴀᴛʀᴏɴ😎**")
 
 
 bot.run()
