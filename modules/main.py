@@ -22,14 +22,14 @@ from pyrogram.types.messages_and_media import message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-bot = Client(
-    "bot",
-    api_id=26924168,
-    api_hash=b05041459456cb772f25175e88ffdc53,
-    bot_token=7438535527:AAGqa1YbVzHDgqjykB1oIu8vktIvNJsxrlo)
+bot = Client("bot",
+             bot_token= "7534254348:AAFDHx0y3hpzt4-7xnN0IEtAN7_b25jAHFE"
+             api_id= 23865844,
+             api_hash= "644ca71d8f3a8bf718cc317c53114d9d")
+auth_users = [7535195022, 6622333718]         
 
 
-@bot.on_message(filters.command(["baby"]))
+@bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("**ℍɪɪ 𝕄𝕖𝕘𝕒𝕥𝕣𝕠𝕟😎 \n\n  𝔾ɪᴠᴇ /megatron ℂᴏᴍᴍᴀɴᴅ ᴛᴏ 𝔻ᴏᴡɴʟᴀᴏᴅ 𝔽ʀᴏᴍ ᴀ 𝕋ᴇ𝕩ᴛ ғɪʟᴇ.⚡️\n**")
 
@@ -43,15 +43,28 @@ async def restart_handler(_, m):
 
 @bot.on_message(filters.command(["megatron"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text('**ℍɪɪ 𝕄𝕖𝕘𝕒𝕥𝕣𝕠𝕟😎 \n\n 𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️**')
-    input: Message = await bot.listen(editable.chat.id)
-    x = await input.download()
-    await input.delete(True)
+    global processing_request
+    if m.from_user.id not in auth_users:
+        await m.reply_text("** YOU ARE NOT A AUTH USER\n To Became a Auth User\n Contact - @Megatron246**)
+        return
+        
+    else:
+        
+        editable = await m.reply_text("**➠ 𝐒𝐞𝐧𝐝 𝐌𝐞 𝐘𝐨𝐮𝐫 𝐓𝐗𝐓 𝐅𝐢𝐥𝐞 𝐢𝐧 𝐀 𝐏𝐫𝐨𝐩𝐞𝐫 𝐖𝐚𝐲 \n\n➠ TXT FORMAT : LINK : URL \n➠ 𝐌𝐨𝐝𝐢𝐟𝐢𝐞𝐝 𝐁𝐲:  @Megatron246 **")
+        input: Message = await bot.listen(editable.chat.id)
+        editable = await editable.edit(f"**⚙️PROCESSING INPUT.......**")
 
-    path = f"./downloads/{m.chat.id}"
-
-    try:
-       with open(x, "r") as f:
+        if input.document:
+            processing_request = True
+            x = await input.download()
+            await input.delete(True)
+            file_name, ext = os.path.splitext(os.path.basename(x))
+            credit = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
+            path = f"./downloads/{m.chat.id}"
+            
+            try:
+                
+                with open(x, "r") as f:
            content = f.read()
        content = content.split("\n")
        links = []
